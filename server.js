@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config     = require('config.json');
 
+
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,6 +28,7 @@ app.use('/app', require('./controllers/app.controller'));
 app.get('/', function (req, res) {
   return res.redirect('/app');
 });
+
 
 // Start the Server at a port
 var server = app.listen(3000, function () {
